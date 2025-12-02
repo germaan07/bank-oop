@@ -16,12 +16,12 @@ public class BankReader {
 
     public Bank read() {
         System.out.println("Introduce los datos del banco");
-        System.out.println("Nombre:");
+        System.out.print("Nombre: ");
         String name = scanner.nextLine();
 
         int numAccounts;
         do {
-            System.out.println("¿Cuántas cuentas tiene?");
+            System.out.print("Número de Cuentas: ");
             numAccounts = scanner.nextInt();
             scanner.nextLine();
         } while (numAccounts < 1);

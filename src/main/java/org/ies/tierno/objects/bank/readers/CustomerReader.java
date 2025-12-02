@@ -13,13 +13,13 @@ public class CustomerReader {
 
     public Customer read(){
         System.out.println("Introduce los datos del cliente");
-        System.out.println("NIF:");
+        System.out.print("NIF: ");
         String nif = scanner.nextLine();
 
-        System.out.println("Nombre:");
+        System.out.print("Nombre: ");
         String name = scanner.nextLine();
 
-        System.out.println("Apellidos:");
+        System.out.print("Apellidos: ");
         String surname = scanner.nextLine();
 
         return new Customer(

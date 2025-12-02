@@ -16,10 +16,10 @@ public class AccountReader {
 
     public Account read() {
         System.out.println("Introduce los datos de la cuenta");
-        System.out.println("IBAN:");
+        System.out.print("IBAN: ");
         String iban = scanner.nextLine();
 
-        System.out.println("Saldo:");
+        System.out.print("Saldo: ");
         double balance = scanner.nextDouble();
         scanner.nextLine();
 

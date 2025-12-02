@@ -13,6 +13,46 @@ public class Account {
         this.customer = customer;
     }
 
+
+    public final void showInfo(){
+        System.out.println("    IBAN: " + iban);
+        System.out.println("    Saldo: " + balance);
+        System.out.println("    Información Del Cliente: ");
+        customer.showInfo();
+    }
+
+
+    public final boolean custormerWithNif(String nif){
+        if (customer.getNif().equals(nif)){
+            return true;
+        }
+        return false;
+    }
+
+
+    public final boolean checkBalance(double balance){
+        if (balance < 0){
+            System.out.print("No se puede realizar la acción, pues el ordenante no tiene el suficiente saldo en la cuenta.");
+            return false;
+        }
+        return true;
+    }
+
+
+    public void deposit(double cant){
+        balance = balance + cant;
+    }
+
+
+    public void withdraw(double cant){
+        var finalBalance = balance - cant;
+
+        if (checkBalance(finalBalance)){
+            balance = balance - cant;
+        }
+    }
+
+
     public String getIban() {
         return iban;
     }
